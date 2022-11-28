@@ -1,8 +1,8 @@
-### About
+## About
 
 This is a weather forecast CSV generator. It gathers the weather conditions for a period of time (defined in the .env) and write into a CSV.
 
-## Installing
+### Installing
 
 To install, run:
 
@@ -12,15 +12,15 @@ And then
 
 `npm run dev`
 
-## Gathering information
+### Gathering information
 
 If someone wants to get information about other cities, it is necessary to edit the "cities" array of objects locates in the "main.ts" file MANUALLY.
 
-### Contributions
+## Contributions
 
 Feel free to contribute, I did this while studying and it is a very simple program to gather information while learning APIs.
 
-### Data analysis
+## Data analysis
 
 The predictor.py file is just an idea of how it could be used to analyse data.
 
