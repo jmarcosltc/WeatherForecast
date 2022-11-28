@@ -54,6 +54,10 @@ const writeCsv = async (url: string[]) => {
     var weather_data: Weather[] = []
     var timer = 0;
 
+    // Timer options
+    const interval: any = process.env.INTERVAL
+    const hours: any = process.env.HOURS
+
     const addWeather = setInterval(async function () {
         for (var i = 0; i < url.length; i++) {
             const props = await weatherProps(url[i]);
@@ -87,7 +91,7 @@ const writeCsv = async (url: string[]) => {
         }
 
         timer++;
-        if (timer == 6) {
+        if (timer == hours) {
             const workbook = new Excel.Workbook();
             const worksheet = workbook.addWorksheet('Weather');
             
@@ -118,7 +122,7 @@ const writeCsv = async (url: string[]) => {
             clearInterval(addWeather);
         }
         console.log(weather_data)
-    }, 10000)
+    }, interval)
 
 }
 
